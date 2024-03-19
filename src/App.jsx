@@ -22,6 +22,11 @@ function App() {
     setAmount(convertedAmount)
   }
 
+  //convert function to get the converted amount values
+  const convert = () => {
+    setConvertedAmount(amount * currencyInfo)
+  }
+
   return (
     <>
       <h1 className="text-3xl bg-orange-500">Currency-app</h1>
