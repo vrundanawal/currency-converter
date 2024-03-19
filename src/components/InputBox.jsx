@@ -7,7 +7,7 @@ const InputBox = ({
   onAmountChange,
   onCurrencyChange,
   currencyOptions = [],
-  selectCurrency = "usd",
+  selectCurrency = "inr",
   amountDisable = false,
   currencyDisable = false,
   className = "",
@@ -22,6 +22,7 @@ const InputBox = ({
         >
           {label}
         </label>
+      
         <input
           id={amountInputId}
           className="outline-none w-full bg-transparent py-1.5"
@@ -41,7 +42,7 @@ const InputBox = ({
           className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
           value={selectCurrency}
           disabled={currencyDisable}
-          onChange={() => onCurrencyChange && onCurrencyChange(e.target.value)}
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         >
           {currencyOptions.map((currency) => (
             <option key={currency} value={currency}>
